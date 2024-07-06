@@ -39,7 +39,7 @@ class Calculator {
 
 
     numberClick(number) {
-        if (number !== "." || this.currentInput[this.currentInput.length - 1] !== ".") {
+        if (number !== "." || (this.currentInput[this.currentInput.length - 1] !== "." && Number.isInteger(Number(this.currentInput)))) {
             this.currentInput += `${number}`
         }
     }

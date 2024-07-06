@@ -39,7 +39,9 @@ class Calculator {
 
 
     numberClick(number) {
-        this.currentInput += `${number}`
+        if (number !== "." || this.currentInput[this.currentInput.length - 1] !== ".") {
+            this.currentInput += `${number}`
+        }
     }
 
     //store all input numbers(currentInput) in inputs arr, store all operations in operations arr

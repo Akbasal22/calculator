@@ -93,7 +93,7 @@ class Calculator {
             }
         }
         this.inputs[0] = this.formatNumber(this.inputs[0]);
-        this.currentInput = this.inputs[0];
+        this.currentInput = this.inputs[0].toString();
         this.inputs = [];
     }
 
@@ -146,7 +146,11 @@ document.querySelector('.js-clear-last').addEventListener('click', () => {
 })
 
 //integrate MVC yes
-
 //add clear-all yes
+//add clear-last yes
 
-//add clear-last
+
+//stringfy -1 yes
+// % operation
+// sqrt
+// . button functionality yes

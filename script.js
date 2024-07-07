@@ -48,9 +48,17 @@ class Calculator {
     //calculate all when clicked "="
     operationClick(operation) {
         if (!(this.currentInput === "")) {
-            this.inputs.push(Number(this.currentInput));
-            this.currentInput = "";
-            this.operations.push(operation);
+            if (operation === "%") {
+                this.currentInput = this.formatNumber(Number(this.currentInput) / 100).toString()
+            }
+            else if (operation === "√") {
+                this.currentInput = this.formatNumber(Math.sqrt(Number(this.currentInput))).toString();
+            }
+            else {
+                this.inputs.push(Number(this.currentInput));
+                this.currentInput = "";
+                this.operations.push(operation);
+            }
         }
     }
 
@@ -65,7 +73,6 @@ class Calculator {
                     this.operations.splice(index, 1);
                     this.inputs.splice(index + 1, 1);
                     index--;
-
                 }
                 else if (operation === "×") {
                     this.inputs[index] = this.inputs[index] * this.inputs[index + 1];
@@ -151,8 +158,10 @@ document.querySelector('.js-clear-last').addEventListener('click', () => {
 //add clear-all yes
 //add clear-last yes
 
-
+// . button functionality yes
 //stringfy -1 yes
+
+
 // % operation
 // sqrt
-// . button functionality yes
+// starting with -

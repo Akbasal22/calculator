@@ -47,6 +47,8 @@ class Calculator {
     //store all input numbers(currentInput) in inputs arr, store all operations in operations arr
     //calculate all when clicked "="
     operationClick(operation) {
+
+
         if (!(this.currentInput === "")) {
             if (operation === "%") {
                 this.currentInput = this.formatNumber(Number(this.currentInput) / 100).toString()
@@ -54,11 +56,15 @@ class Calculator {
             else if (operation === "√") {
                 this.currentInput = this.formatNumber(Math.sqrt(Number(this.currentInput))).toString();
             }
+
             else {
                 this.inputs.push(Number(this.currentInput));
                 this.currentInput = "";
                 this.operations.push(operation);
             }
+        }
+        else if (operation === "-" && this.inputs.length === 0) {
+            this.currentInput += "-";
         }
     }
 

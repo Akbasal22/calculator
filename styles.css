@@ -1,7 +1,82 @@
-.main-grid {
-    display: grid;
-    grid-template-rows: repeat(5, 50px);
-    width: 200px;
-    
+body {
+    font-size: large;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+.main-grid {
+    display: grid;
+    grid-template-rows: repeat(6, 50px);
+    width: 200px;
+}
+
+.calculation {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 5%;
+    color: white;
+    background-color: rgb(0, 133, 177);
+    margin: 7px 0px 7px 0px;
+    border-radius: 16px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+    margin: 2px 2px 2px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+button:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+
+.operation {
+    background-color: rgb(255, 255, 83);
+   
+}
+
+.operation:hover {
+    background-color: rgb(255, 240, 50); /* Slightly darker shade */
+}
+
+.clear-last {
+    background-color: rgb(255, 15, 83);
+}
+
+.clear-last:hover{
+    background-color: rgb(255, 0, 50);
+}
+
+.clear-all {
+    background-color: rgb(33, 50, 144);
+    color: white;
+}
+
+.clear-all:hover {
+    background-color: rgb(33, 35, 121);
+}
+
+.number {
+    background-color: rgb(224, 224, 224);
+}
+
+.number:hover {
+    background-color: rgb(176, 176, 176);
+}
+
+.calculate {
+    background-color: turquoise;
+}
+
+.calculate:hover{
+    background-color: rgb(31, 188, 194);
+}
